@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<title>vinh ton</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>-->
+<!--<script src="graphic.js" type="text/javascript"></script>-->
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.vinh-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.vinh-grid-rev {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.vinh-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.vinh-shiftup {
+  margin-top: -2px;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style="position: fixed;">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3 " >
+      <a href="#about-me" class="w3-button w3-block w3-black">[about me]</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#my-cv" class="w3-button w3-block w3-black">[my cv]</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#my-projects" class="w3-button w3-block w3-black">[projects]</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contact-me" class="w3-button w3-block w3-black">[contact]</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container" style="height: 70%;" id="home">
+    <iframe src="https://www.openprocessing.org/sketch/402629/embed/" style="width: 100%; height: 100%;" ></iframe>
+  <div class="w3-display-middle w3-center">
+    <div class="w3-text-white" style="font-size:30px">
+      <p>hello world wide web</p>
+    </div>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large w3-text-white">
+    <p>print("hello world wide web")</p>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-large">
+
+  <!-- Home Container -->
+<div class="w3-container" id="about-me">
+  <div class="w3-content w3-center" style="max-width:85%">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">about me</span></h5>
+    <p class="w3-center cv-line">🤠🤠</p>
+    <div class="vinh-grid w3-center">
+        <div  class="text_1" style="width:100%;max-width:300px; text-align: left;">
+          <p>howdy there! my name is vinh tôn, and i'm a ux designer / product developer. </p>
+          <p> my interests lie in the intersection of technology and mental health, and my goal is to develop digital interventions that bridge accessibility gaps in mental health care in underserved, marginalized communities. </p>
+        </div>
+        <div class="vinh-col">
+          <img class="vinh_1" src="vinh_1.jpg" alt="vietnamese man with moustache sitting on a log in the snow." style="width:100%;max-width:300px; height: 100%; max-height: 600px; border: 2px solid black;" class="w3-margin-top">
+          <p class="vinh-shiftup">fig.1: "vinh sits on a log"</p>
+        </div>
+    </div>
+    <br>
+    <div class="vinh-grid-rev w3-center">
+      <div class="vinh-col">
+      <img class="vinh_2" src="vinh_2.jpg" alt="vietnamese man with moustache sitting on a log in the snow." style="width:100%;max-width:300px; height: 100%; max-height: 600px; border: 2px solid black;" class="w3-margin-top">
+      <p class="vinh-shiftup">fig.2: "vinh shares a selfie"</p>
+      </div>
+      <div  class="text_1" style="width:100%;max-width:300px; text-align: left;">
+        <p> i was born in Bến Tre, Việt Nam then immigrated to the US in 1999, spending my childhood in Olympia, WA and Charleston, SC, and am now currently based in the SF Bay Area.</p>
+        <p> in my free time, i like to exist in nature and create art: whether through poetry, photography, or memes (to get me through this quarantine). </p>
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="my-cv" style="padding-top:64px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">curriculum vitae</span></h5>
+    <p class="w3-center cv-line">👨‍🎓👨‍🎓</p>
+    <div class="w3-row w3-center w3-card w3-padding w3-light-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">computer science</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">neuro + psych</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-small w3-card w3-light-grey">
+      <p class="w3-tag w3-wide cv-subtitle">education:</p>
+      <div class="cv-section">
+        <p><b>b.s symbolic systems ('20) @ stanford university  (<b>gpa:</b> 3.67)</b></p>
+        <p class="cv-line cv-desc"> studying the relationship between systems of information processing e.g: natural language, the human mind, and artificial intelligence systems. </p>
+        <br/>
+        <p class="cv-line"><b>m.s computer science ('22) @ stanford univerity (<b>gpa:</b> n/a) </b></p>
+        <p class="cv-line cv-desc"> studying human-computer interaction, identifying and designing human-centered digital solutions for real world problems, with a focus on community mental health.</p>
+      </div>
+      <p class="w3-tag w3-wide cv-subtitle">experience / projects: </p>
+      <div class="cv-section">
+        <p><b>part-time software engineer, healthbuddy (2020)</b> </p>
+        <p class="cv-line cv-desc"><i>healthbuddy is a chatbot developed by WHO and UNICEF designed to combat mass misinformation spread during the 2020 COVID-19 outbreak, providing an intuitive and accessible platform for users to empower themselves with health safety information and report fake news around COVID-19. </i></p>
+        <p class="cv-desc">-> will update conversation infrastructure to be more robust by improving NLP algorithms</p> 
+        <p class="cv-line cv-desc">-> will re-design UI and web page with user experience and accessibility in mind </p> 
+      </div>
+      <div class="cv-section">
+        <p><b>data science and software engineering intern, aerobotics (2019)</b> </p>
+        <p class="cv-line cv-desc"><i>aerobotics is a social impact startup that uses aerial drone imagery, computer vision, and big data analysis techniques to provide an end-to-end solution to help farmers with management of yield management, pest and disease, and crop protection. </i></p>
+        <p class="cv-desc">-> contributed to unsupervised image semantic segmentation using PyTorch</p> 
+        <p class="cv-line cv-desc">-> helped build an internal toolkit for managing user databases using Angular</p> 
+      </div>
+      <div class="cv-section">
+        <p><b> part-time software engineer, raheem ai (2018) </b> </p>
+        <p class="cv-line cv-desc"><i> raheem ai is a chatbot and data visualization platform that allows rating, reporting, and intuitive interaction with police incidents topographically to empower communities of color to inform themselves of navigation of safe routes and community climates. </i></p>
+        <p class="cv-desc">-> developed user-facing chatbot using Microsoft Azure services </p> 
+        <p class="cv-line cv-desc">-> implemented UX design decisions for user accessibility and intuitive use </p> 
+        <p class="cv-line cv-desc">-> incorporated NLP and other ML toolkits for robust, meaningful user experience and analytics </p> 
+        <p class="cv-line cv-desc">-> helped write documentation for front end development and usage </p> 
+      </div>
+      <p class="w3-tag w3-wide cv-subtitle">languages: </p>
+      <div class="cv-section">
+          <p class=""><b>Python, Javascript (React, Angular), C/C++, R, HTML + CSS </b></p> 
+      </div>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-small w3-card w3-light-grey">
+      <p class="w3-tag w3-wide cv-subtitle">education:</p>
+      <div class="cv-section">
+        <p><b>b.s symbolic systems ('20) @ stanford university  (<b>gpa:</b> 3.67)</b></p>
+        <p class="cv-line cv-desc"> studying the relationship between systems of information processing e.g: natural language, the human mind, and artificial intelligence systems. </p>
+        <br/>
+        <p class="cv-line"><b>m.s computer science ('22) @ stanford univerity (<b>gpa:</b> n/a) </b></p>
+        <p class="cv-line cv-desc"> studying human-computer interaction, identifying and designing human-centered digital solutions for real world problems, with a focus on community mental health.</p>
+      </div>
+      <p class="w3-tag w3-wide cv-subtitle">experience / projects: </p>
+      <div class="cv-section">
+          <p><b> intern, brainmind (2018)</b> </p>
+          <p class="cv-line cv-desc"><i> brainmind is a collaborative environment between prominent neuroscientists, entrepreneurs, and investors that seeks to identify and accelerate the growth of neurotech startups, create a community for impact investing in neuroscience, and define the ethical landscape of the future as neurotechnology continues to emerge. </i></p>
+          <p class="cv-desc">-> researched and provided consultation on emerging neurotechnology startups</p> 
+          <p class="cv-line cv-desc">-> contributed to, managed, and maintained BrainMind information database </p> 
+          <p class="cv-line cv-desc">-> drafted company white papers and presentations to impact investors </p> 
+          <p class="cv-line cv-desc">-> wrote grant proposals for medical device research and development</p> 
+      </div>
+      <div class="cv-section"> 
+          <p><b> research assistant, poldrack lab @ stanford psychology dept. (2016-18)</b> </p>
+          <p class="cv-line cv-desc"><i> the poldrack lab is a cognitive neuroscience lab that uses an algorithmic approach, neuroimaging techniques, and neuroinformatics tools to investigate and map the relationships between different dimensions of executive control, decision making, and memory/learning in the human brain. </i></p>
+          <p class="cv-desc">-> researched and provided consultation on emerging neurotechnology startups </p> 
+          <p class="cv-line cv-desc">-> developed cognitive tasks and analyzed behavioral data using JavaScript, Python, R </p> 
+          <p class="cv-line cv-desc">-> performed comprehensive review and meta-analysis of neural-behavioral economics literature </p> 
+          <p class="cv-line cv-desc">-> operated fMRI scanner, monitored human subject, and helped maintain neural imaging database </p> 
+      </div>  
+      <div class="cv-section">
+          <p><b>teaching assistant, PSYCH50 @ stanford psychology dept. (2018)</b> </p>
+          <p class="cv-line cv-desc"><i>PSYCH50 is the introductory undergraduate cognitive neuroscience course offered at Stanford University, which covers behavioral and neural correlates of perception, motion, attention, memory, learning, decision-making as well as basic neurophysiology and related imaging techniques. </i></p>
+          <p class="cv-desc">-> developed and delivered of discovery based pedagogy</p> 
+          <p class="cv-line cv-desc">-> prepared and executed educational materials, exercises, and activities for undergraduates </p> 
+          <p class="cv-line cv-desc">-> led a cohort of students in discussion based classroom sections </p> 
+          <p class="cv-line cv-desc">-> held office hours and served as an educational and professional resource for students </p> 
+      </div>
+      <div class="cv-section">
+        <p><b>teaching fellow, PSYCH1 @ stanford psychology dept. (2018)</b> </p>
+        <p class="cv-line cv-desc"><i>PSYCH1 is the introductory undergraduate psychology course offered at Stanford University, which explores developmental, cognitive, affective, abnormal, clinical, social, and cultural psychology and serves as a practicum for students to develop formal scientific inquiry and publication skills. </i></p>
+        <p class="cv-desc">-> routinely facilitated flow and management of a ~300 student lecture</p> 
+        <p class="cv-line cv-desc">-> developed and implemented inquiry based curricula to undergraduates</p> 
+        <p class="cv-line cv-desc">-> delivered instruction and facilitated discussion in small seminar settings</p> 
+        <p class="cv-line cv-desc">-> held office hours and collaborated with undergraduates to design individualized research proposals</p> 
+      </div>
+      <div class="cv-section">
+      <p><b> student host, neurofriends podcast (2017)</b> </p>
+      <p class="cv-line cv-desc"><i> Neurofriends is a student run neuroscience podcast series whose mission is to improve cultural, financial, and educational accessibility of modern research and promote communication between researchers and the general public by offering a friendly, exoteric medium to explore science.</p> 
+      <p class="cv-line cv-desc">->  organized and conducted interviews with guest neuroscientists and psychologists </p> 
+      <p class="cv-line cv-desc">-> acted as a liaison between the general public and specialized academics </p> 
+      </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container" id="my-projects" style="padding-top:64px; font-style: normal;"> 
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide">sample projects</span></h5>
+    <div class="vinh-grid w3-center">
+      <div class="vinh-col">
+      <video class="w3-card w3-margin w3-light-grey" width="280" height="210" controls>
+        <source src="raheem.mp4" type="video/mp4">
+      </video>
+      <p class="vinh-shiftup cv-desc"> proj.1: police interaction reporting chatbot</p>
+      <p class="cv-line cv-desc"> linked to Bay area map (microsoft azure)</p>
+      </div>
+      <div class="vinh-col">
+        <video class="w3-card w3-margin w3-light-grey" width="280" height="210" controls>
+          <source src="log_reg.mp4" type="video/mp4">
+          </video>
+          <p class="vinh-shiftup cv-desc"> proj.2: mental health binary classifier</p>
+          <p class="cv-line cv-desc"> using logistic regression (python)</p>
+        </div>
+    </div>
+    <div class="vinh-grid w3-center">
+        <div class="vinh-col">
+          <video class="w3-card w3-margin w3-light-grey" width="280" height="210" controls>
+            <source src="chatbot.mp4" type="video/mp4">
+            </video>
+            <p class="vinh-shiftup cv-desc"> proj.3: chatbot movie recommender system</p>
+            <p class="cv-line cv-desc"> w/ collaborative filtering, sentiment </p>
+            <p class="cv-line cv-desc"> classifier, minimum edit distance (python)</p>
+          </div>
+          <div class="vinh-col">
+            <video class="w3-card w3-margin w3-light-grey" width="280" height="210" controls>
+              <source src="thrift.mp4" type="video/mp4">
+              </video>
+              <p class="vinh-shiftup cv-desc"> proj.4: med-fi thrift shopping iOS app</p>
+              <p class="cv-line cv-desc"> w/ item selection and map (react native) </p>
+          </div>
+    </div>
+    <br>
+    <div class="vinh-col">
+    <iframe class="w3-card" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/338483957&color=%230a0400&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <p class="vinh-shiftup cv-desc"> proj.5: neuroscience podcast interviewing guest neuroscientists and current research</p>    
+  </div>
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="contact-me" style="padding-top:64px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style="font-style: normal;">contact me</span></h5>
+    <p class="w3-center cv-line" style="font-style: normal;">😎😎</p>
+    <p> if <b>professional: </b></p>
+    <div class="w3-panel w3-leftbar w3-light-grey small-line-box">
+      <p> arr = [</p>
+      <a href="https://linkedin.com/in/vinh-ton">linkedin, </a>
+      <br>
+      <a href="https://github.com/vinhton123">github, </a>
+      <br>
+      <a href="mailto:vinhton@stanford.edu?subject=howdy there vinh! :)">email</a>
+      <p>];</p>
+    </div>
+    <p> elif <b>social:  </b></p>
+    <div class="w3-panel w3-leftbar w3-light-grey small-line-box">
+      <p> arr = [</p>
+      <a href="https://www.instagram.com/vinnytintin/"> instagram, </a>
+      <br>
+      <a href="https://www.facebook.com/vinhton4554"> facebook</a>
+      <p>];</p>
+
+    </div>
+    <!--
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+    -->
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-sand w3-padding-48 w3-large">
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
+
