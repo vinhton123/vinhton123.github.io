@@ -15,18 +15,19 @@ body, html {
   font-family: "Inconsolata", sans-serif;
 }
 
-html {
+html, body {
   overflow: hidden;
   position: fixed;
 }
 
-body {
+.mainwrapper {
   width: 100vw;
   height: 100vw;
   overflow-y: scroll;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
+
+
 .bgimg {
   background-position: center;
   background-size: cover;
@@ -62,7 +63,7 @@ body {
 }
 </style>
 <body>
-
+<div class="mainwrapper">
 <!-- Links (sit on top) -->
 <div class="w3-top" style="position: fixed;">
   <div class="w3-row w3-padding w3-black">
@@ -336,6 +337,7 @@ function openMenu(evt, menuName) {
 document.getElementById("myLink").click();
 </script>
 
+</div>
 </body>
 </html>
 
